@@ -10,17 +10,27 @@ double total(double bApel, double bJeruk, double bSemangka) {
 
 	double total = (apel * bApel) + (jeruk * bJeruk) + (semangka * bSemangka);
 
-
 	if (totalBerat >= 10) {
 		hasil = (5.0 / 100) * total;
-	}
-	else if (totalBerat >= 8) {
+	}else if (totalBerat >= 8) {
 		hasil = (2.0 / 100) * total;
-	}
-	else {
+	}else {
 		hasil = total;
 	}
 
 	return total - hasil;
 }
+int main()
+{
+	double bApel, bJeruk, bSemangka;
+	cout << "berat apel : "; cin >> bApel;
+	cout << "berat jeruk : "; cin >> bJeruk;
+	cout << "berat semangka :";
+	cin >> bSemangka;
+
+	cout << "Total : ";
+	cout << total(bApel, bJeruk, bSemangka);
+
+}
+
 
